@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan UP • الامتحانات</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="exams">
+  <div class="nav">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Plan UP</h1>
+          <div class="sub">الامتحانات والعدّاد</div>
+        </div>
+      </div>
+      <div class="links">
+        <span class="pill blue" id="welcomeUser">أهلًا</span>
+        <a href="index.html">الرئيسية</a>
+        <a href="tasks.html">المهام</a>
+        <a href="weekly.html">الخطة الأسبوعية</a>
+        <a href="exams.html">الامتحانات</a>
+        <a href="about.html">عن المشروع</a>
+        <a href="profile.html">الملف الشخصي</a>
+        <a href="#" id="logoutBtn">تسجيل خروج</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div>
+        <h2>الامتحانات</h2>
+        <p>أضف الامتحانات وشاهد كم يوم باقي.</p>
+      </div>
+      <div class="badge">يتم الحساب تلقائيًا</div>
+    </div>
+
+    <div class="grid cards">
+      <div class="card wide">
+        <div class="split">
+          <h3>إضافة / تعديل امتحان</h3>
+          <button class="btn danger" id="clearPastExams">حذف الامتحانات المنتهية</button>
+        </div>
+
+        <form class="form grid3 mtop" id="examForm">
+          <div>
+            <label>المادة</label>
+            <select id="examSubject"></select>
+          </div>
+
+          <div>
+            <label>أو مادة جديدة</label>
+            <input class="input" id="newExamSubject" placeholder="مثال: ذكاء اصطناعي"/>
+          </div>
+
+          <div>
+            <label>التاريخ</label>
+            <input class="input" type="date" id="examDate"/>
+          </div>
+
+          <div class="full">
+            <label>عنوان الامتحان</label>
+            <input class="input" id="examTitle" placeholder="مثال: نهائي"/>
+          </div>
+
+          <div class="full">
+            <label>المكان (اختياري)</label>
+            <input class="input" id="examLocation" placeholder="مثال: قاعة 201"/>
+          </div>
+
+          <div class="row full">
+            <button class="btn primary" id="examSubmitBtn" type="submit">إضافة امتحان</button>
+            <button class="btn" id="examResetBtn" type="button">مسح</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card wide">
+        <h3>قائمة الامتحانات</h3>
+        <div class="mtop" style="overflow:auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>المادة</th>
+                <th>العنوان</th>
+                <th>التاريخ</th>
+                <th>المكان</th>
+                <th>العدّاد</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="examsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

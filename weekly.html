@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan UP • الخطة الأسبوعية</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="weekly">
+  <div class="nav">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Plan UP</h1>
+          <div class="sub">الخطة الأسبوعية</div>
+        </div>
+      </div>
+      <div class="links">
+        <span class="pill blue" id="welcomeUser">أهلًا</span>
+        <a href="index.html">الرئيسية</a>
+        <a href="tasks.html">المهام</a>
+        <a href="weekly.html">الخطة الأسبوعية</a>
+        <a href="exams.html">الامتحانات</a>
+        <a href="about.html">عن المشروع</a>
+        <a href="profile.html">الملف الشخصي</a>
+        <a href="#" id="logoutBtn">تسجيل خروج</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div>
+        <h2>الخطة الأسبوعية</h2>
+        <p>عرض المهام حسب اليوم بناءً على تاريخ الموعد.</p>
+      </div>
+      <div class="badge" id="weekRange">الأسبوع</div>
+    </div>
+
+    <div class="row" style="margin-bottom:12px">
+      <a class="btn" href="tasks.html">إضافة مهام</a>
+      <button class="btn danger" id="clearDoneWeek">حذف المهام المنجزة (هذا الأسبوع)</button>
+    </div>
+
+    <div class="grid cards" id="weekWrap"></div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

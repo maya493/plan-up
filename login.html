@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan UP • تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="login">
+  <div class="nav">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Plan UP</h1>
+          <div class="sub">تسجيل الدخول / إنشاء حساب</div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="login.html" class="active">الدخول</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero heroMedia">
+      <div>
+        <h2>أهلًا 👋</h2>
+        <p>سجّل الدخول للوصول إلى مخطط دراستك الشخصي.</p>
+      </div>
+      <img class="heroImg" src="images/login.svg" alt="صورة تسجيل الدخول">
+    </div>
+
+    <div class="grid cards">
+      <div class="card half">
+        <h3>تسجيل الدخول</h3>
+        <form class="form mtop" id="loginForm">
+          <div>
+            <label>اسم المستخدم</label>
+            <input class="input" id="l_user" autocomplete="username" />
+          </div>
+          <div>
+            <label>كلمة المرور</label>
+            <input class="input" id="l_pass" type="password" autocomplete="current-password" />
+          </div>
+          <button class="btn primary" type="submit">دخول</button>
+        </form>
+      </div>
+
+      <div class="card half">
+        <h3>إنشاء حساب</h3>
+        <form class="form mtop" id="registerForm">
+          <div>
+            <label>اسم المستخدم</label>
+            <input class="input" id="r_user" autocomplete="username" />
+          </div>
+          <div>
+            <label>كلمة المرور</label>
+            <input class="input" id="r_pass" type="password" autocomplete="new-password" />
+          </div>
+          <div>
+            <label>تأكيد كلمة المرور</label>
+            <input class="input" id="r_pass2" type="password" autocomplete="new-password" />
+          </div>
+          <button class="btn" type="submit">إنشاء</button>
+        </form>
+      </div>
+
+      <div class="card wide">
+        <h3>معلومة</h3>
+        <div class="sub">كل مستخدم لديه بياناته الخاصة (مهام/امتحانات) محفوظة في LocalStorage.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

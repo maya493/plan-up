@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan UP • المهام</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="tasks">
+  <div class="nav">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Plan UP</h1>
+          <div class="sub">إدارة المهام</div>
+        </div>
+      </div>
+      <div class="links">
+        <span class="pill blue" id="welcomeUser">أهلًا</span>
+        <a href="index.html">الرئيسية</a>
+        <a href="tasks.html">المهام</a>
+        <a href="weekly.html">الخطة الأسبوعية</a>
+        <a href="exams.html">الامتحانات</a>
+        <a href="about.html">عن المشروع</a>
+        <a href="profile.html">الملف الشخصي</a>
+        <a href="#" id="logoutBtn">تسجيل خروج</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div>
+        <h2>المهام</h2>
+        <p>أضف مهامك، حدد الموعد والأولوية، وعلّمها كمنجزة.</p>
+      </div>
+      <div class="badge" id="miniStats">تحميل...</div>
+    </div>
+
+    <div class="grid cards">
+      <div class="card wide">
+        <div class="split">
+          <h3>إضافة / تعديل مهمة</h3>
+                  </div>
+
+        <form class="form grid3 mtop" id="taskForm">
+          <div>
+            <label>المادة</label>
+            <select id="taskSubject"></select>
+          </div>
+
+          <div>
+            <label>أو مادة جديدة</label>
+            <input class="input" id="newSubject" placeholder="مثال: شبكات"/>
+          </div>
+
+          <div>
+            <label>تاريخ الموعد</label>
+            <input class="input" type="date" id="taskDeadline"/>
+          </div>
+
+          <div class="full">
+            <label>عنوان المهمة</label>
+            <input class="input" id="taskTitle" placeholder="مثال: مراجعة الفصل الثالث"/>
+          </div>
+
+          <div>
+            <label>الأولوية</label>
+            <select id="taskPriority" class="input">
+              <option value="عالي">عالي</option>
+              <option value="متوسط" selected>متوسط</option>
+              <option value="منخفض">منخفض</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label>ملاحظات (اختياري)</label>
+            <input class="input" id="taskNotes" placeholder="ملاحظة قصيرة..."/>
+          </div>
+
+          <div class="row full">
+            <button class="btn primary" id="submitBtn" type="submit">إضافة مهمة</button>
+            <button class="btn" id="resetBtn" type="button">مسح</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card wide">
+        <div class="split">
+          <h3>قائمة المهام</h3>
+          <div class="row">
+            <input class="input" id="q" placeholder="بحث..."/>
+            <select id="fSubject" class="input">
+              <option value="">كل المواد</option>
+            </select>
+            <select id="fStatus" class="input">
+              <option value="">كل الحالات</option>
+              <option value="قيد التنفيذ">قيد التنفيذ</option>
+              <option value="منجز">منجز</option>
+            </select>
+            <select id="fPriority" class="input">
+              <option value="">كل الأولويات</option>
+              <option value="عالي">عالي</option>
+              <option value="متوسط">متوسط</option>
+              <option value="منخفض">منخفض</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mtop" style="overflow:auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>المادة</th>
+                <th>المهمة</th>
+                <th>الموعد</th>
+                <th>الأولوية</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="tasksBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

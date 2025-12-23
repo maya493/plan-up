@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan UP • الرئيسية</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="dashboard">
+  <div class="nav">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Plan UP</h1>
+          <div class="sub">مخطط الدراسة الذكي</div>
+        </div>
+      </div>
+      <div class="links">
+        <span class="pill blue" id="welcomeUser">أهلًا</span>
+        <a href="index.html">الرئيسية</a>
+        <a href="tasks.html">المهام</a>
+        <a href="weekly.html">الخطة الأسبوعية</a>
+        <a href="exams.html">الامتحانات</a>
+        <a href="about.html">عن المشروع</a>
+        <a href="profile.html">الملف الشخصي</a>
+        <a href="#" id="logoutBtn">تسجيل خروج</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero heroMedia">
+      <div>
+        <h2>نظّم دراستك بشكل أفضل</h2>
+        <p>Plan UP يساعدك على ترتيب المهام، متابعة المواعيد، وتذكّر الامتحانات بسهولة.</p>
+      </div>
+      <img class="heroImg" src="images/hero.svg" alt="صورة الرئيسية">
+    </div>
+
+    <div class="grid cards">
+      <div class="card">
+        <h3>عدد المهام</h3>
+        <div class="kpi" id="k_total">0</div>
+        <div class="sub">إجمالي المهام التي أضفتها</div>
+      </div>
+
+      <div class="card">
+        <h3>مهام منجزة</h3>
+        <div class="kpi" id="k_done">0</div>
+        <div class="sub">المهام التي تم إنجازها</div>
+      </div>
+
+      <div class="card">
+        <h3>مستحق اليوم</h3>
+        <div class="kpi" id="k_due_today">0</div>
+        <div class="sub">مهام غير منجزة موعدها اليوم</div>
+      </div>
+
+      <div class="card wide">
+        <div class="split">
+          <h3>نسبة الإنجاز</h3>
+          <a class="btn primary" href="tasks.html">إدارة المهام</a>
+        </div>
+        <div class="progressWrap">
+          <div class="progressBar">
+            <div class="progressFill" id="progressFill"></div>
+          </div>
+          <div class="small mtop" id="progressText">نسبة الإنجاز: 0%</div>
+        </div>
+      </div>
+
+      <div class="card half">
+        <h3>مستحق هذا الأسبوع</h3>
+        <div class="kpi" id="k_due_week">0</div>
+        <div class="sub">مهام غير منجزة ضمن هذا الأسبوع</div>
+        <div class="mtop">
+          <a class="btn" href="weekly.html">فتح الخطة الأسبوعية</a>
+        </div>
+      </div>
+
+      <div class="card half" id="nextExam">
+        <h3>أقرب امتحان</h3>
+        <div class="sub">تحميل...</div>
+      </div>
+
+      <div class="card wide">
+        <div class="split">
+          <h3>مهام قريبة</h3>
+          <a class="btn" href="tasks.html">عرض الكل</a>
+        </div>
+
+        <div class="mtop" style="overflow:auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>المادة</th>
+                <th>المهمة</th>
+                <th>الموعد</th>
+                <th>الأولوية</th>
+              </tr>
+            </thead>
+            <tbody id="upcomingBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

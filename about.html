@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan UP • عن المشروع</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body data-page="about">
+  <div class="nav">
+    <div class="container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Plan UP</h1>
+          <div class="sub">عن المشروع</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <span class="pill blue" id="welcomeUser">أهلًا</span>
+        <a href="index.html">الرئيسية</a>
+        <a href="tasks.html">المهام</a>
+        <a href="weekly.html">الخطة الأسبوعية</a>
+        <a href="exams.html">الامتحانات</a>
+        <a href="about.html">عن المشروع</a>
+        <a href="profile.html">الملف الشخصي</a>
+        <a href="#" id="logoutBtn">تسجيل خروج</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <div>
+        <h2>عن Plan UP</h2>
+        <p>موقع يساعد الطلاب على تنظيم المهام والمواعيد والامتحانات بطريقة بسيطة وعملية.</p>
+      </div>
+      <div class="badge">HTML • CSS • JavaScript</div>
+    </div>
+
+    <img class="heroImg" src="images/about.svg" alt="صورة عن المشروع" style="width:100%; margin-top:10px;">
+
+    <div class="grid cards mtop">
+      <div class="card half">
+        <h3>فكرة المشروع</h3>
+        <p class="sub">
+          Plan UP عبارة عن مخطط للدراسة: بتضيفي مهامك، بتحددي موعد وأولوية، وبتتابعي نسبة الإنجاز،
+          وكمان بتضيفي الامتحانات وبيحسبلك كم يوم باقي.
+        </p>
+      </div>
+
+      <div class="card half">
+        <h3>المميزات</h3>
+        <div class="sub" style="display:grid;gap:8px">
+          <div>• تسجيل دخول / إنشاء حساب</div>
+          <div>• إضافة / تعديل / حذف المهام</div>
+          <div>• أولويات + حالة المهمة</div>
+          <div>• خطة أسبوعية حسب الموعد</div>
+          <div>• صفحة امتحانات مع عدّاد الأيام</div>
+          <div>• لكل مستخدم بيانات منفصلة (LocalStorage)</div>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <h3>كيف يتم حفظ البيانات؟</h3>
+        <p class="sub">
+          يتم حفظ البيانات داخل المتصفح باستخدام LocalStorage لكل مستخدم بشكل منفصل.
+          المشروع Frontend فقط (بدون قاعدة بيانات حقيقية) لكنه مناسب جدًا لمادة الويب.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
